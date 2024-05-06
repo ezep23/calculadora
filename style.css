@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #cacaca;
+    display: grid;
+    place-items: center;
+}
+
+.calculadora {
+    background-color: #000000;
+    color: white;
+    width: 350px;
+    max-width: 100%; /* Para que la calculadora ocupe el tamaño de la pantalla*/
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+} 
+
+.pantalla{
+    grid-column: 1 / 5 ; /* Reforzar concepto de grid y -1 siempre ocupa la linea final */
+    background-color: #757575;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right; /* alinear texto a la derecha como las calculadoras */
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.btn {
+    background-color: #757575;
+    color: white;
+    border: 0;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content:center; /* con estas 3 ultimas lineas se centra un div */
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer; /* se pone el cursor en hand cuando esta arriba */
+}
+
+.btn:hover {
+    background-color: #b4b4b4;
+}
+
+#cero {
+    grid-column: span 2; /* span hace que se estira 2 filas*/ 
+}
+
+#igual {
+    grid-row: span 2;
+    background-color: #ff0000;
+}
+
+#igual:hover {
+    background-color: #adadad;
+}
